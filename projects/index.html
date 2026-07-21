@@ -1,0 +1,37 @@
+---
+layout: default
+title: Projects
+description: "Projects, publications, and selected public work."
+---
+
+<section class="page-hero narrow-hero">
+  <p class="eyebrow">Projects / Publications</p>
+  <h1>Work that benefits from being written down.</h1>
+  <p>Selected projects, research artifacts, publications, and experiments.</p>
+</section>
+
+<section class="section" aria-labelledby="projects-title">
+  <div class="section-heading">
+    <p class="eyebrow">Projects</p>
+    <h2 id="projects-title">Selected builds.</h2>
+  </div>
+  <div class="card-grid">
+    {% assign projects = site.projects | sort: 'year' | reverse %}
+    {% for project in projects %}
+      {% include project-card.html %}
+    {% endfor %}
+  </div>
+</section>
+
+<section class="section" aria-labelledby="publications-title">
+  <div class="section-heading">
+    <p class="eyebrow">Publications</p>
+    <h2 id="publications-title">Papers and written work.</h2>
+  </div>
+  <div class="card-grid">
+    {% assign publications = site.publications | sort: 'year' | reverse %}
+    {% for publication in publications %}
+      {% include publication-card.html %}
+    {% endfor %}
+  </div>
+</section>

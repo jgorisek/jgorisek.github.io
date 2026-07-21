@@ -1,0 +1,32 @@
+---
+layout: default
+---
+
+<article class="article-shell">
+  <a class="back-link" href="{{ '/projects/' | relative_url }}">Back to projects</a>
+  <header class="article-header">
+    <p class="eyebrow">
+      {% if page.year %}{{ page.year }}{% endif %}
+      {% if page.status %} / {{ page.status }}{% endif %}
+    </p>
+    <h1>{{ page.title }}</h1>
+    {% if page.description %}
+      <p class="article-deck">{{ page.description }}</p>
+    {% endif %}
+    {% if page.tags %}
+      <div class="tag-row article-tags" aria-label="Project tags">
+        {% for tag in page.tags %}
+          <span>{{ tag }}</span>
+        {% endfor %}
+      </div>
+    {% endif %}
+  </header>
+  <div class="prose">
+    {{ content }}
+  </div>
+  {% if page.repo_url and page.repo_url != "" %}
+    <p class="article-action">
+      <a href="{{ page.repo_url }}">View repository</a>
+    </p>
+  {% endif %}
+</article>

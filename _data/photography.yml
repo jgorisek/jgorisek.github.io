@@ -1,0 +1,24 @@
+- title: "City Geometry"
+  image: "/assets/img/photo-city.png"
+  alt: "Abstract urban geometry with strong light and shadow."
+  location: "Urban series"
+  year: "2026"
+  tags:
+    - Architecture
+    - Street
+- title: "Quiet Horizon"
+  image: "/assets/img/photo-horizon.png"
+  alt: "Layered landscape horizon in soft evening color."
+  location: "Travel notes"
+  year: "2025"
+  tags:
+    - Landscape
+    - Travel
+- title: "Field Notes"
+  image: "/assets/img/photo-field.png"
+  alt: "Close detail study inspired by field photography."
+  location: "Everyday archive"
+  year: "2024"
+  tags:
+    - Detail
+    - Texture

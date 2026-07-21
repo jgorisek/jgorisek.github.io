@@ -1,0 +1,10 @@
+- label: Home
+  url: /
+- label: CV
+  url: /cv/
+- label: Photography
+  url: /photography/
+- label: Projects
+  url: /projects/
+- label: Blog
+  url: /blog/

@@ -1,0 +1,19 @@
+<article class="item-card publication-card">
+  <div class="item-card-topline">
+    {% if publication.year %}<span>{{ publication.year }}</span>{% endif %}
+    {% if publication.venue %}<span>{{ publication.venue }}</span>{% endif %}
+  </div>
+  <h3>
+    {% if publication.paper_url and publication.paper_url != "" %}
+      <a href="{{ publication.paper_url }}">{{ publication.title }}</a>
+    {% else %}
+      {{ publication.title }}
+    {% endif %}
+  </h3>
+  {% if publication.authors %}
+    <p class="muted">{{ publication.authors }}</p>
+  {% endif %}
+  {% if publication.description %}
+    <p>{{ publication.description }}</p>
+  {% endif %}
+</article>

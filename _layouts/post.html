@@ -1,0 +1,17 @@
+---
+layout: default
+---
+
+<article class="article-shell">
+  <a class="back-link" href="{{ '/blog/' | relative_url }}">Back to blog</a>
+  <header class="article-header">
+    <p class="eyebrow">{{ page.date | date: "%B %-d, %Y" }}</p>
+    <h1>{{ page.title }}</h1>
+    {% if page.description %}
+      <p class="article-deck">{{ page.description }}</p>
+    {% endif %}
+  </header>
+  <div class="prose">
+    {{ content }}
+  </div>
+</article>

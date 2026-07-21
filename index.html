@@ -1,0 +1,116 @@
+---
+layout: default
+title: Home
+body_class: home-page
+---
+
+<section class="hero" aria-labelledby="hero-title">
+  <div class="hero-background" aria-hidden="true"></div>
+  <div class="hero-inner">
+    <p class="eyebrow">{{ site.data.profile.role }}</p>
+    <h1 id="hero-title">{{ site.data.profile.name }}</h1>
+    <p class="hero-copy">{{ site.data.profile.tagline }}</p>
+    <div class="hero-actions" aria-label="Contact links">
+      {% for link in site.data.profile.social %}
+        {% if link.url and link.url != "" %}
+          {% if link.url contains '://' or link.url contains 'mailto:' %}
+            {% assign contact_href = link.url %}
+          {% else %}
+            {% assign contact_href = link.url | relative_url %}
+          {% endif %}
+          <a class="icon-link" href="{{ contact_href }}" aria-label="{{ link.label }}">
+            <span>{{ link.icon }}</span>
+          </a>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section intro-section" aria-labelledby="intro-title">
+  <div class="section-heading">
+    <p class="eyebrow">Bio</p>
+    <h2 id="intro-title">A practical, curious corner of the internet.</h2>
+  </div>
+  <div class="intro-grid">
+    <p class="lead">{{ site.data.profile.summary }}</p>
+    <div class="availability-strip">
+      <span>Based in {{ site.data.profile.location }}</span>
+      <strong>{{ site.data.profile.availability }}</strong>
+    </div>
+  </div>
+</section>
+
+<section class="section timeline-section" aria-labelledby="timeline-title">
+  <div class="section-heading">
+    <p class="eyebrow">Timeline</p>
+    <h2 id="timeline-title">Selected markers, built forward.</h2>
+  </div>
+  <ol class="timeline">
+    {% for moment in site.data.profile.timeline %}
+      <li class="timeline-item">
+        <time>{{ moment.year }}</time>
+        <div>
+          <h3>{{ moment.label }}</h3>
+          <p>{{ moment.text }}</p>
+        </div>
+      </li>
+    {% endfor %}
+  </ol>
+</section>
+
+<section class="section focus-section" aria-labelledby="focus-title">
+  <div class="section-heading">
+    <p class="eyebrow">Focus</p>
+    <h2 id="focus-title">The main threads.</h2>
+  </div>
+  <div class="card-grid three-up">
+    {% for item in site.data.profile.focus %}
+      <article class="item-card accent-card">
+        <h3>{{ item.title }}</h3>
+        <p>{{ item.text }}</p>
+      </article>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="section feature-grid" aria-label="Featured site sections">
+  <a class="feature-link" href="{{ '/cv/' | relative_url }}">
+    <span>CV</span>
+    <strong>Resume, experience, education, and selected skills</strong>
+  </a>
+  <a class="feature-link" href="{{ '/projects/' | relative_url }}">
+    <span>Projects</span>
+    <strong>Research, public work, publications, and experiments</strong>
+  </a>
+  <a class="feature-link" href="{{ '/photography/' | relative_url }}">
+    <span>Photography</span>
+    <strong>Selected images, essays, locations, and visual notes</strong>
+  </a>
+  <a class="feature-link" href="{{ '/blog/' | relative_url }}">
+    <span>Blog</span>
+    <strong>Longer notes, technical writing, and field reports</strong>
+  </a>
+</section>
+
+<section class="section latest-section" aria-labelledby="latest-title">
+  <div class="section-heading">
+    <p class="eyebrow">Latest</p>
+    <h2 id="latest-title">Recently added.</h2>
+  </div>
+  <div class="latest-grid">
+    {% assign latest_post = site.posts | first %}
+    {% if latest_post %}
+      <article class="item-card">
+        <p class="eyebrow">Writing</p>
+        <h3><a href="{{ latest_post.url | relative_url }}">{{ latest_post.title }}</a></h3>
+        <p>{{ latest_post.description }}</p>
+      </article>
+    {% endif %}
+    {% assign latest_project = site.projects | sort: 'year' | reverse | first %}
+    {% if latest_project %}
+      {% assign project = latest_project %}
+      {% include project-card.html %}
+    {% endif %}
+  </div>
+</section>

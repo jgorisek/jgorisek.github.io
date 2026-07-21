@@ -1,0 +1,17 @@
+<article class="item-card">
+  <div class="item-card-topline">
+    {% if project.year %}<span>{{ project.year }}</span>{% endif %}
+    {% if project.status %}<span>{{ project.status }}</span>{% endif %}
+  </div>
+  <h3><a href="{{ project.url | relative_url }}">{{ project.title }}</a></h3>
+  {% if project.description %}
+    <p>{{ project.description }}</p>
+  {% endif %}
+  {% if project.tags %}
+    <div class="tag-row" aria-label="Project tags">
+      {% for tag in project.tags %}
+        <span>{{ tag }}</span>
+      {% endfor %}
+    </div>
+  {% endif %}
+</article>
