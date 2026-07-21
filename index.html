@@ -11,24 +11,6 @@ body_class: home-page
       <h1 id="hero-title">{{ site.data.profile.name }}</h1>
       <p class="hero-copy">{{ site.data.profile.tagline }}</p>
       <p class="hero-summary">{{ site.data.profile.summary }}</p>
-      <div class="hero-meta">
-        <span>{{ site.data.profile.location }}</span>
-        <span>{{ site.data.profile.availability }}</span>
-      </div>
-      <div class="hero-actions" aria-label="Contact links">
-        {% for link in site.data.profile.social %}
-          {% if link.url and link.url != "" %}
-            {% if link.url contains '://' or link.url contains 'mailto:' %}
-              {% assign contact_href = link.url %}
-            {% else %}
-              {% assign contact_href = link.url | relative_url %}
-            {% endif %}
-            <a class="icon-link" href="{{ contact_href }}" aria-label="{{ link.label }}">
-              <span>{{ link.icon }}</span>
-            </a>
-          {% endif %}
-        {% endfor %}
-      </div>
     </div>
   </div>
 </section>
