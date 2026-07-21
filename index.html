@@ -8,7 +8,6 @@ body_class: home-page
   <div class="hero-background" aria-hidden="true"></div>
   <div class="hero-inner">
     <div>
-      <p class="eyebrow">{{ site.data.profile.role }}</p>
       <h1 id="hero-title">{{ site.data.profile.name }}</h1>
       <p class="hero-copy">{{ site.data.profile.tagline }}</p>
       <p class="hero-summary">{{ site.data.profile.summary }}</p>
@@ -31,44 +30,5 @@ body_class: home-page
         {% endfor %}
       </div>
     </div>
-  </div>
-</section>
-
-<section class="section home-overview" aria-label="Site overview">
-  <div class="feature-grid" aria-label="Featured site sections">
-    <a class="feature-link" href="{{ '/cv/' | relative_url }}">
-      <span>CV</span>
-      <strong>Experience and skills</strong>
-    </a>
-    <a class="feature-link" href="{{ '/projects/' | relative_url }}">
-      <span>Projects</span>
-      <strong>Projects and publications</strong>
-    </a>
-    <a class="feature-link" href="{{ '/photography/' | relative_url }}">
-      <span>Photography</span>
-      <strong>Selected images</strong>
-    </a>
-    <a class="feature-link" href="{{ '/blog/' | relative_url }}">
-      <span>Blog</span>
-      <strong>Notes and updates</strong>
-    </a>
-  </div>
-
-  <div class="compact-timeline" aria-labelledby="timeline-title">
-    <div class="section-heading">
-      <p class="eyebrow">Timeline</p>
-      <h2 id="timeline-title">Timeline</h2>
-    </div>
-    <ol class="timeline">
-      {% for moment in site.data.profile.timeline %}
-        <li class="timeline-item">
-          <time>{{ moment.year }}</time>
-          <div>
-            <h3>{{ moment.label }}</h3>
-            <p>{{ moment.text }}</p>
-          </div>
-        </li>
-      {% endfor %}
-    </ol>
   </div>
 </section>

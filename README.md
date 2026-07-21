@@ -4,7 +4,7 @@ Personal website built for GitHub Pages with Jekyll.
 
 ## What is included
 
-- Home page with bio, timeline, focus areas, and contact icons
+- Home page with bio and contact icons
 - CV/resume page
 - Photography gallery
 - Projects and publications
@@ -17,7 +17,6 @@ Update `_data/profile.yml` for:
 
 - Name, role, location, tagline, and bio
 - LinkedIn, GitHub, email, and resume links
-- Home page timeline
 - CV experience, education, and skills
 
 Blank social URLs are ignored on the home page. Add your LinkedIn or email URL when you want those icons to appear.

@@ -5,10 +5,6 @@ layout: default
 <article class="article-shell">
   <a class="back-link" href="{{ '/projects/' | relative_url }}">Back to publications</a>
   <header class="article-header">
-    <p class="eyebrow">
-      {% if page.year %}{{ page.year }}{% endif %}
-      {% if page.venue %} / {{ page.venue }}{% endif %}
-    </p>
     <h1>{{ page.title }}</h1>
     {% if page.authors %}
       <p class="muted">{{ page.authors }}</p>

@@ -21,28 +21,6 @@ social:
     icon: "CV"
     url: "/cv/"
 
-focus:
-  - title: "Engineering"
-    text: "Software, simulation, controls, and tools."
-  - title: "Research"
-    text: "Papers, experiments, and technical notes."
-  - title: "Photography"
-    text: "Selected images and visual notes."
-
-timeline:
-  - year: "2026"
-    label: "Site launched"
-    text: "CV, projects, publications, photos, and blog."
-  - year: "2025"
-    label: "Research and engineering"
-    text: "Simulation, controls, and software tools."
-  - year: "2024"
-    label: "Publications"
-    text: "Papers, reports, and reproducible work."
-  - year: "2023"
-    label: "Photography archive"
-    text: "Selected images by place and series."
-
 resume:
   intro: "CV overview."
   experience:

@@ -5,14 +5,12 @@ description: "Resume and CV overview."
 ---
 
 <section class="page-hero narrow-hero">
-  <p class="eyebrow">CV / Resume</p>
   <h1>CV</h1>
   <p>{{ site.data.profile.resume.intro }}</p>
 </section>
 
 <section class="section resume-section" aria-labelledby="experience-title">
   <div class="section-heading">
-    <p class="eyebrow">Experience</p>
     <h2 id="experience-title">Experience</h2>
   </div>
   <div class="resume-list">
@@ -31,7 +29,6 @@ description: "Resume and CV overview."
 
 <section class="section resume-section" aria-labelledby="education-title">
   <div class="section-heading">
-    <p class="eyebrow">Education</p>
     <h2 id="education-title">Education</h2>
   </div>
   <div class="resume-list">
@@ -50,7 +47,6 @@ description: "Resume and CV overview."
 
 <section class="section skills-section" aria-labelledby="skills-title">
   <div class="section-heading">
-    <p class="eyebrow">Skills</p>
     <h2 id="skills-title">Skills</h2>
   </div>
   <div class="tag-row large-tags">
