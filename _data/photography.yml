@@ -1,6 +1,7 @@
 - title: "City Geometry"
   image: "/assets/img/photo-city.png"
   alt: "Abstract urban geometry with strong light and shadow."
+  description: "Architectural lines, strong shadows, and a compact urban palette."
   location: "Urban series"
   year: "2026"
   tags:
@@ -9,6 +10,7 @@
 - title: "Quiet Horizon"
   image: "/assets/img/photo-horizon.png"
   alt: "Layered landscape horizon in soft evening color."
+  description: "A calm landscape study built around color bands and open space."
   location: "Travel notes"
   year: "2025"
   tags:
@@ -17,6 +19,7 @@
 - title: "Field Notes"
   image: "/assets/img/photo-field.png"
   alt: "Close detail study inspired by field photography."
+  description: "A close texture study from the everyday archive."
   location: "Everyday archive"
   year: "2024"
   tags:

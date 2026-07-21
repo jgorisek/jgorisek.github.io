@@ -360,27 +360,69 @@ p {
 }
 
 .photo-card {
+  position: relative;
   overflow: hidden;
   border: 1px solid var(--line);
   border-radius: var(--radius);
   background: rgba(16, 24, 39, 0.86);
+  outline: none;
 }
 
 .photo-card img {
   width: 100%;
-  aspect-ratio: 4 / 5;
+  aspect-ratio: 3 / 4;
   object-fit: cover;
+  transition: transform 180ms ease;
 }
 
-.photo-card-body {
+.photo-panel-overlay {
+  position: absolute;
+  inset: 0;
   display: grid;
-  gap: 0.8rem;
+  align-content: end;
+  gap: 0.45rem;
   padding: 1rem;
+  color: var(--ink);
+  background:
+    linear-gradient(transparent 25%, rgba(7, 11, 20, 0.28) 52%, rgba(7, 11, 20, 0.92) 100%);
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 180ms ease, transform 180ms ease;
 }
 
-.photo-card-body p {
-  margin: 0.3rem 0 0;
+.photo-panel-overlay p {
+  margin: 0;
   color: var(--muted);
+}
+
+.photo-panel-overlay h3 {
+  font-size: 1.2rem;
+}
+
+.photo-meta {
+  color: var(--accent);
+  font-size: 0.82rem;
+  font-weight: 800;
+}
+
+.photo-card:hover img,
+.photo-card:focus img,
+.photo-card:focus-within img {
+  transform: scale(1.035);
+}
+
+.photo-card:hover .photo-panel-overlay,
+.photo-card:focus .photo-panel-overlay,
+.photo-card:focus-within .photo-panel-overlay {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (hover: none) {
+  .photo-panel-overlay {
+    opacity: 1;
+    transform: none;
+  }
 }
 
 .resume-list,

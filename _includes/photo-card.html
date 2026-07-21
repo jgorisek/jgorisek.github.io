@@ -1,21 +1,15 @@
-<article class="photo-card">
+<article class="photo-card" tabindex="0">
   {% if photo.image contains '://' %}
     {% assign image_src = photo.image %}
   {% else %}
     {% assign image_src = photo.image | relative_url %}
   {% endif %}
   <img src="{{ image_src }}" alt="{{ photo.alt | default: photo.title }}" loading="lazy">
-  <div class="photo-card-body">
-    <div>
-      <h3>{{ photo.title }}</h3>
-      <p>{{ photo.location }}{% if photo.year %} / {{ photo.year }}{% endif %}</p>
-    </div>
-    {% if photo.tags %}
-      <div class="tag-row" aria-label="Photo tags">
-        {% for tag in photo.tags %}
-          <span>{{ tag }}</span>
-        {% endfor %}
-      </div>
+  <div class="photo-panel-overlay">
+    <p class="photo-meta">{{ photo.location }}{% if photo.year %} / {{ photo.year }}{% endif %}</p>
+    <h3>{{ photo.title }}</h3>
+    {% if photo.description %}
+      <p>{{ photo.description }}</p>
     {% endif %}
   </div>
 </article>
