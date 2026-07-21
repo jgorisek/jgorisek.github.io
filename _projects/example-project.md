@@ -1,6 +1,6 @@
 ---
-title: "Example Research Tool"
-description: "A concise project card for a public repository, experiment, prototype, or research artifact."
+title: "Example Project"
+description: "Short summary of a project or public repository."
 year: "2026"
 status: "In progress"
 tags:
@@ -12,7 +12,7 @@ repo_url: "https://github.com/jgorisek"
 
 ## Overview
 
-Use this page for a project narrative: what problem it addresses, what you built, and what someone should look at first.
+Summary of the problem, approach, result, and links.
 
 ## Links
 

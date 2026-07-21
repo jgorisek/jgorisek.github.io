@@ -30,7 +30,7 @@ body_class: home-page
 <section class="section intro-section" aria-labelledby="intro-title">
   <div class="section-heading">
     <p class="eyebrow">Bio</p>
-    <h2 id="intro-title">A practical, curious corner of the internet.</h2>
+    <h2 id="intro-title">About</h2>
   </div>
   <div class="intro-grid">
     <p class="lead">{{ site.data.profile.summary }}</p>
@@ -44,7 +44,7 @@ body_class: home-page
 <section class="section timeline-section" aria-labelledby="timeline-title">
   <div class="section-heading">
     <p class="eyebrow">Timeline</p>
-    <h2 id="timeline-title">Selected markers, built forward.</h2>
+    <h2 id="timeline-title">Timeline</h2>
   </div>
   <ol class="timeline">
     {% for moment in site.data.profile.timeline %}
@@ -62,7 +62,7 @@ body_class: home-page
 <section class="section focus-section" aria-labelledby="focus-title">
   <div class="section-heading">
     <p class="eyebrow">Focus</p>
-    <h2 id="focus-title">The main threads.</h2>
+    <h2 id="focus-title">Focus</h2>
   </div>
   <div class="card-grid three-up">
     {% for item in site.data.profile.focus %}
@@ -77,26 +77,26 @@ body_class: home-page
 <section class="section feature-grid" aria-label="Featured site sections">
   <a class="feature-link" href="{{ '/cv/' | relative_url }}">
     <span>CV</span>
-    <strong>Resume, experience, education, and selected skills</strong>
+    <strong>Experience and skills</strong>
   </a>
   <a class="feature-link" href="{{ '/projects/' | relative_url }}">
     <span>Projects</span>
-    <strong>Research, public work, publications, and experiments</strong>
+    <strong>Projects and publications</strong>
   </a>
   <a class="feature-link" href="{{ '/photography/' | relative_url }}">
     <span>Photography</span>
-    <strong>Selected images, essays, locations, and visual notes</strong>
+    <strong>Selected images</strong>
   </a>
   <a class="feature-link" href="{{ '/blog/' | relative_url }}">
     <span>Blog</span>
-    <strong>Longer notes, technical writing, and field reports</strong>
+    <strong>Notes and updates</strong>
   </a>
 </section>
 
 <section class="section latest-section" aria-labelledby="latest-title">
   <div class="section-heading">
     <p class="eyebrow">Latest</p>
-    <h2 id="latest-title">Recently added.</h2>
+    <h2 id="latest-title">Latest</h2>
   </div>
   <div class="latest-grid">
     {% assign latest_post = site.posts | first %}

@@ -6,14 +6,14 @@ description: "Resume and CV overview."
 
 <section class="page-hero narrow-hero">
   <p class="eyebrow">CV / Resume</p>
-  <h1>Experience with a bias toward making things work.</h1>
+  <h1>CV</h1>
   <p>{{ site.data.profile.resume.intro }}</p>
 </section>
 
 <section class="section resume-section" aria-labelledby="experience-title">
   <div class="section-heading">
     <p class="eyebrow">Experience</p>
-    <h2 id="experience-title">Recent roles.</h2>
+    <h2 id="experience-title">Experience</h2>
   </div>
   <div class="resume-list">
     {% for item in site.data.profile.resume.experience %}
@@ -32,7 +32,7 @@ description: "Resume and CV overview."
 <section class="section resume-section" aria-labelledby="education-title">
   <div class="section-heading">
     <p class="eyebrow">Education</p>
-    <h2 id="education-title">Academic background.</h2>
+    <h2 id="education-title">Education</h2>
   </div>
   <div class="resume-list">
     {% for item in site.data.profile.resume.education %}
@@ -51,7 +51,7 @@ description: "Resume and CV overview."
 <section class="section skills-section" aria-labelledby="skills-title">
   <div class="section-heading">
     <p class="eyebrow">Skills</p>
-    <h2 id="skills-title">Working toolkit.</h2>
+    <h2 id="skills-title">Skills</h2>
   </div>
   <div class="tag-row large-tags">
     {% for skill in site.data.profile.resume.skills %}
